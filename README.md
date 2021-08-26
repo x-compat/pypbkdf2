@@ -2,6 +2,8 @@
 
 PBKDF2 (Password-Based Key Derivation Function 2) https://en.wikipedia.org/wiki/PBKDF2
 
+[![pypbkdf2 CI](https://github.com/x-compat/pypbkdf2/actions/workflows/ci.yml/badge.svg)](https://github.com/x-compat/pypbkdf2/actions/workflows/ci.yml)
+
 # USAGE
 
 ## Install
