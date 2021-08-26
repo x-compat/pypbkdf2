@@ -1,4 +1,4 @@
-## PBKDF2 implementation for Python
+## PBKDF2 implementation for Python [work in progress]
 
 PBKDF2 (Password-Based Key Derivation Function 2) https://en.wikipedia.org/wiki/PBKDF2
 
