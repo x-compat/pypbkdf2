@@ -2,7 +2,13 @@ import unittest
 
 import pypbkdf2
 
-class TestEnv(unittest.TestCase):
+class TestPyPbfkdf2(unittest.TestCase):
+
+    def test_check_salt_size_should_8(self):
+        expected = 8
+
+        p = pypbkdf2.PyPBKDF2(salt_size=5)
+        self.assertEqual(expected, p.salt_size, msg='minimum salt size should be 8')
 
     def test_to_return_true(self):
         expected = True

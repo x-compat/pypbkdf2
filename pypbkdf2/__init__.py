@@ -9,6 +9,12 @@ __version__ = '1.0.0'
 VERSION = tuple([int(v) for v in __version__.split('.')])
 
 '''
+MIN_SALT_SIZE = 8
+minimum salt size recommended by the RFC
+'''
+MIN_SALT_SIZE = 8
+
+'''
 generate_random_salt
 will generate random salt with or without seed
 '''
@@ -29,9 +35,14 @@ def _slow_equals(cipher_text: str, new_cipher_text: bytes) -> bool:
 PyPBKDF2
 '''
 class PyPBKDF2:
-    def __init__(self, alg='sha256', salt_size=8, iterations=100000, key_len=64) -> None:
+    def __init__(self, alg='sha256', salt_size=MIN_SALT_SIZE, iterations=100000, key_len=64) -> None:
         self.alg = alg
-        self.salt_size = salt_size
+
+        if salt_size < 8:
+            self.salt_size = MIN_SALT_SIZE
+        else:
+            self.salt_size = salt_size
+            
         self.iterations = iterations
         self.key_len = key_len
     
