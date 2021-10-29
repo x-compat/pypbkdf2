@@ -8,9 +8,8 @@ PBKDF2 (Password-Based Key Derivation Function 2) https://en.wikipedia.org/wiki/
 
 ## Install
 
-TODO
 ```
-pip install ****
+$ pip install py-pbkdf2
 ```
 
 
@@ -41,9 +40,6 @@ valid = p.verify_password('12345', cipher_text, salt)
 
 print(valid) # True
 ```
-
-# Doc
- TODO
 	
 	
 ## x-compat 2021
